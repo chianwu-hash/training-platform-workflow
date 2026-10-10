@@ -9,7 +9,7 @@
 
 ## 在另一台電腦安裝
 
-需要 Windows、Chrome、Node.js 22 以上、Git、PowerShell 7.6.1 以上，以及能讀取這個私人 repo 的 GitHub 帳號。Node 套件由鎖定檔安裝，不會下載另一套 Chrome。
+需要 Windows、Chrome、Node.js 22.12 以上、Git、PowerShell 7.6.1 以上，以及能讀取這個私人 repo 的 GitHub 帳號。Node 套件由鎖定檔安裝，不會下載另一套 Chrome。
 
 ```powershell
 git clone https://github.com/chianwu-hash/training-platform-workflow.git
