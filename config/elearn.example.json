@@ -1,0 +1,19 @@
+{
+  "platform": "elearn",
+  "instance": "01",
+  "owner": "REPLACE_WITH_STABLE_THREAD_ID",
+  "targetId": "REPLACE_WITH_EXACT_TARGET_ID",
+  "courseUrl": "https://mohw.elearn.hrd.gov.tw/learn/",
+  "courseTitle": "REPLACE_WITH_FULL_COURSE_TITLE",
+  "accountMarker": "REPLACE_WITH_VISIBLE_REAL_NAME_AFTER_IDENTITY_CHECK",
+  "stopAt": "REPLACE_WITH_ISO_DATE_WITH_TIMEZONE",
+  "stateFile": "runtime/elearn-state.json",
+  "pollMs": 5000,
+  "chapters": ["REPLACE_WITH_EXACT_VIDEO_CHAPTER_TITLE"],
+  "chapterIndex": 0,
+  "videoSelector": "video",
+  "chapterSelector": "a",
+  "playSelector": ".jp-play",
+  "playText": "play",
+  "hoverSelector": "#jquery_jplayer_1"
+}

@@ -1,0 +1,16 @@
+node_modules/
+local/
+runtime/
+downloads/
+certificates/
+screenshots/
+*.log
+*.jsonl
+.env
+.env.*
+!.env.example
+*.pdf
+*.png
+*.jpg
+*.zip
+*.crdownload

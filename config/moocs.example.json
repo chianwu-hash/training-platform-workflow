@@ -1,0 +1,18 @@
+{
+  "platform": "moocs",
+  "instance": "01",
+  "owner": "REPLACE_WITH_STABLE_THREAD_ID",
+  "targetId": "REPLACE_WITH_EXACT_TARGET_ID",
+  "courseUrl": "https://moocs.moe.edu.tw/moocs/#/learning/REPLACE_COURSE_ID",
+  "courseTitle": "REPLACE_WITH_FULL_COURSE_TITLE",
+  "accountMarker": "REPLACE_WITH_VISIBLE_ACCOUNT_MARKER_AFTER_IDENTITY_CHECK",
+  "stopAt": "REPLACE_WITH_ISO_DATE_WITH_TIMEZONE",
+  "stateFile": "runtime/moocs-state.json",
+  "pollMs": 5000,
+  "chapters": ["REPLACE_WITH_EXACT_VIDEO_CHAPTER_TITLE"],
+  "chapterIndex": 0,
+  "videoSelector": "video",
+  "chapterSelector": "mat-expansion-panel-header",
+  "playSelector": ".vm-control-ui > vm-control:nth-of-type(2)",
+  "playText": "播放"
+}
