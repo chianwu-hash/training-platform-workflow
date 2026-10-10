@@ -9,7 +9,7 @@
 
 ## 在另一台電腦安裝
 
-需要 Windows、Chrome、Node.js 22.12 以上、Git、PowerShell 7.6.1 以上，以及能讀取這個私人 repo 的 GitHub 帳號。Node 套件由鎖定檔安裝，不會下載另一套 Chrome。
+需要 Windows、Chrome、Node.js 22.12 以上、Git、PowerShell 7.6.1 以上。repo 與底層 cdp-tools 均公開，下載不需登入 GitHub；研習平台仍須自行登入。Node 套件由鎖定檔安裝，不會下載另一套 Chrome。
 
 ```powershell
 git clone https://github.com/chianwu-hash/training-platform-workflow.git
@@ -22,13 +22,27 @@ npm test
 已有 `ai-browser-launch` 的電腦沿用原設定，跳過以下安裝。沒有啟動器時，先安裝同一套底層 CDP 工具，再安裝本 repo 內的共享占用啟動器：
 
 ```powershell
-npm install -g github:chianwu-hash/cdp-tools
+npm install -g https://github.com/chianwu-hash/cdp-tools.git
 pwsh -NoProfile -File scripts/install-browser.ps1
 ```
 
 關閉後重新開啟終端機及 AI 助手，確認 `Get-Command ai-browser-launch`。安裝器使用 `%LOCALAPPDATA%/AIWorkBrowser`，建立註冊 main、01、02 實例，各自獨立 profile；不搬移原電腦登入資料，也不覆寫既有啟動器。若公司政策禁止全域 npm 或修改使用者 PATH，請由管理者安裝共享工具。
 
 第一次到新電腦，**自行登入平台**。不要複製 Chrome profile、Cookie、密碼或 session。看完 [新電腦設定](docs/新電腦設定.md)，再填課程設定。
+
+## 安裝 AI skill
+
+在 repo 目錄執行：
+
+```powershell
+npm run skill:install
+```
+
+安裝器將精簡 skill 放到 `$CODEX_HOME/skills/training-platform-workflow`，未設定 CODEX_HOME 時使用 `~/.codex/skills/`。它只安裝入口及本機 repo 位置，SOP 與程式繼續由本 repo 維護。保留 clone 目錄；移動目錄後重新安裝。已有其他來源的同名 skill 時會停止，不覆寫。
+
+重新啟動 Codex 或開啟新對話後，可說「使用 $training-platform-workflow 協助我接續磨課師研習」，也可直接提出雙平台研習需求，由 AI 選用技能。skill 本身不建立排程、不擴大網站操作授權。
+
+更新時執行 `git pull --ff-only`、`npm ci`、`npm run skill:install`，讓 skill 與 repo 同步。其他支援 SKILL.md 的 AI 工具可用 `npm run skill:install -- --skills-root 實際技能根目錄` 安裝，但須自行核對該工具的技能載入與排程能力。
 
 ## 開啟並綁定精確分頁
 
